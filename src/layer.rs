@@ -1005,7 +1005,7 @@ where
             let target = target.string(meta.target());
 
             let mut otel_event = otel::Event::new(
-                String::new(),
+                meta.name(),
                 crate::time::now(),
                 vec![Key::new("level").string(meta.level().as_str()), target],
                 0,
